@@ -1,0 +1,170 @@
+.task-panel{
+    padding: 20px 20px;
+    justify-self: center;
+    max-width: 500px;
+    background-color: var(--panel-background);
+    border-radius: 30px;
+}
+.task-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.task-item{
+    /* padding: 10px 0; */
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.task-item > *{
+    display: inline;
+}
+.strikethrough-parent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+.strikethrough{
+    /* position: absolute; */
+    background-color: var(--body-color);
+    top: 18px;
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: left;
+    height: 2px;
+    transition: transform 0.2s ease;
+}
+.task-item.completed{
+    opacity: 0.6;
+}
+
+.task-item.completed > .strikethrough-parent > .strikethrough{
+    transform: scaleX(1);
+}
+
+
+
+
+
+
+
+
+/* Button syles */
+.task-actions{
+    display: flex;
+}
+.task-actions > *{
+    color: var(--body-color);
+}
+.task-actions > button{
+    background-color: rgba(0, 0, 0, 0);
+    /* background-color: white; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    margin: 0px;
+    height: 100%;
+}
+.task-actions > button, .task-item > .task-text{
+    padding: 10px 6px;
+}
+
+.task-actions > button > i{
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+.task-actions > button > .btn-backdrop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff6663;
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+
+
+
+/* Style the padding for the buttons */
+
+.task-actions > .edit-btn, .task-actions > .edit-btn > .btn-backdrop{
+    transform-origin: left;
+    border-radius: 100% 0  0 100%;
+}
+.task-actions > .edit-btn > .btn-backdrop{
+    background-color: #3A5487;
+}
+
+.task-actions > .complete-btn, .task-actions > .complete-btn > .btn-backdrop{
+    transform-origin: right;
+    border-radius: 0 100% 100% 0;
+}
+.task-actions > .complete-btn > .btn-backdrop{
+    background-color: #0b7a75;
+}
+
+
+
+
+
+/* Hover the buttons */
+
+.task-actions:hover > button {
+    background-color: var(--scroll-background);
+}
+.task-actions:hover > button > i {
+    opacity: 0.6;
+}
+.task-actions > button:hover{
+    color: white;
+}
+.task-actions > button:hover > i{
+    opacity: 1;
+}
+.task-actions > button:hover > .btn-backdrop{
+    transform: scaleX(1);
+}
+
+/* The undo and complete button */
+.task-actions > button > .fa-undo{
+    display: none;
+}
+.task-actions > button > .fa-circle-check{
+    display: block;
+}
+.task-actions > button:hover > .fa-undo{
+    display: block;
+}
+.task-actions > button:hover > .fa-circle-check{
+    display: none;
+}
+
+
+
+
+
+
+
+/* Undo button style */
+#undo-btn{
+    border: none;
+    opacity: 0.6;
+    border-radius: 100px;
+    padding: 20px;
+    transform: rotate(90deg);
+    transition: all 0.2s ease;
+}
+#undo-btn.active{
+    opacity: 1;
+    cursor: pointer;
+}
+#undo-btn.active:hover{
+    transform: scale(1.15) rotate(0deg);
+}

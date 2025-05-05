@@ -1,0 +1,116 @@
+.todo-lists{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.list-item{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 15px 10px; */
+    /* cursor: pointer; */
+    border-radius: 100px;
+    transition: opacity 0.15s ease, background 0.15s ease;
+    
+}
+.list-name{
+    padding: 15px 10px;
+}
+
+.todo-lists:hover > .list-item{
+    opacity: 0.65;
+}
+
+.todo-lists:hover > .list-item:hover{
+    background-color: var(--scroll-background);
+    opacity: 1;
+}
+
+.options-btn{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: var(--body-color);
+    font-size: 15px;
+    padding: 0px 20px;  
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.options-btn:hover{
+    background-color: var(--options-btn-hover);
+}
+
+/* List options */
+.list-options-popup{
+    position: absolute;
+    margin: 0;
+    padding: 5px;
+    z-index: 5;
+    background-color: var(--panel-background);
+    list-style: none;
+    display: none;
+}
+.list-options-popup > li {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: var(--panel-background);
+    transition: background 0.2s ease;
+}
+.list-options-popup > li:hover{
+    background-color: var(--scroll-background);
+}
+.list-options-popup.active{
+    display: block;
+}
+
+.delete-panel{
+    background-color: var(--panel-background);
+    position: fixed;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 30%;
+    z-index: 5;
+    flex-flow: column;
+    display: none;
+}
+.delete-panel.active{
+    display: flex;
+}
+.delete-panel > *{
+    font-size: 20px;
+    flex: 0 1 50%;
+    width: 100%;
+}
+.delete-panel > .delete-panel-text{    
+    position: relative;
+    /* padding: 20px 15px; */
+    top: 15%;
+    left: 20px;
+}
+.delete-panel > .delete-panel-buttons{
+    display: flex;
+    width: 100%;
+    /* background-color: red; */
+}
+.delete-panel > .delete-panel-buttons > button{
+    flex: 0 1 50%;
+    font-size: 20px;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 6;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+.delete-panel > .delete-panel-buttons > button:hover{
+    opacity: 1;
+}
+#cancel-btn{
+    background-color: #ff6663;
+}
+#confirm-btn{
+    background-color: #0b7a75;
+}

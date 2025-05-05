@@ -1,0 +1,18 @@
+#mouse-light{
+    position: fixed;
+    width: 1000px;
+    height: 1000px;
+    background: radial-gradient(
+        circle,
+        rgba(36, 105, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0) 70%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 6;
+    display: none;
+    transform: translate(-50%, -50%);
+}
+#mouse-light.active{
+    display: block;
+}

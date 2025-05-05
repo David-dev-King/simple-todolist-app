@@ -1,0 +1,35 @@
+.theme-slider{
+    position: absolute;
+    width: 70px;
+    top: 30px;
+    right: 40px;
+    cursor: pointer;
+}
+.slider-background{
+    display: inline-block;
+    background-color: gray;
+    width: 100%;
+    border-radius: 100px;
+    /* padding: 200px; */
+    /* z-index: 10; */
+    height: 10px;
+}
+.slider-icon{
+    position: absolute;
+    /* padding: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: rgb(102, 111, 119);
+    color: white;
+    left: 0;
+    transform: translate(-50%, -70%);
+    transition: all 0.2s ease;
+}
+
+.theme-slider.dark > .slider-icon{
+    left: 100%;
+}

@@ -1,0 +1,65 @@
+.task-form{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 30px 0;
+    border-radius: 100px;
+    /* display: inline; */
+}
+.task-form > *{
+    border: none;
+}
+.task-input{
+    flex: 0 1 85%;
+    font-size: 15px;
+    outline: none;
+}
+.task-input:focus{
+    box-shadow: 0 0 5px 1px lightblue;
+}
+.task-form > button{
+    cursor: pointer;
+    flex: 0 1 10%;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: white;
+    transition: background 0.2s ease;
+}
+.vertical-line{
+    height: 25px;
+    width: 1px;
+    background-color: #2C3E50;
+}
+
+#edit-task-form{
+    background-color: #f8fafc;
+    position: absolute;
+    display: none;
+    z-index: 5;
+}
+/* #edit-task-form >*{
+    background-color: #f8fafc;
+} */
+#edit-task-form.triggered{
+    display: block;
+}
+
+
+.task-form > button:hover{
+    background-color: #EDEFF1;
+    /* color: white; */
+}
+
+#edit-list-form{
+    position: fixed;
+    width: 35%;
+    top: 30%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+#edit-list-form.active{
+    display: flex;
+}

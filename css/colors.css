@@ -1,0 +1,23 @@
+/* Light theme */
+html{
+    --scroll-background : #EDEFF1;
+    --sticky-background : #F4F6F8;
+    --body-color : #2C3E50;
+    --panel-background : #ffffff;
+    --options-btn-hover : #d6d9db;
+}
+html.dark-theme{
+    --scroll-background : #2C3A47;
+    --sticky-background : #1F2933;
+    --body-color : #F0F4F8;
+    --panel-background : #323F4B;
+    --options-btn-hover : #3a4c5e;
+}
+body{
+    background-color: var(--scroll-background);
+    color: var(--body-color);
+}
+
+
+
+/* Dark theme */
