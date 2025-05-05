@@ -1,6 +1,24 @@
-# simple-todolist-app
-## A learning project with HTML CSS and JS
-This project was untracked for the entirety of it's lifetime and there's some spaghetti code, however, it taught me some good coding practices and I also got myself familiar with CRUD operations and localstorage.
-In the future, I will make sure to start all projects with version control in mind.
-Thanks for checking this out!!!
-Depending on when you are reading this, the project might still be hosted using cloudfront: [Todo-list / Task Manager app](https://d3jzigfckzrcqj.cloudfront.net/)
+# Simple To-Do List App 📝
+
+A learning project built with **HTML, CSS, and JavaScript**.
+
+## 📚 About the Project
+
+This project was untracked for most of its development, and admittedly, there’s some spaghetti code here and there. That said, it taught me valuable lessons about:
+
+- Clean coding practices
+- CRUD operations
+- Working with `localStorage`
+- The importance of using version control from the beginning
+
+In future projects, I’ll make sure to initialize Git and use GitHub from day one.
+
+## 🚀 Live Demo
+
+Depending on when you’re reading this, the app might still be hosted via **AWS CloudFront**:
+
+👉 [To-Do List / Task Manager App](https://d3jzigfckzrcqj.cloudfront.net/)
+
+## 🙏 Thanks
+
+Thanks for checking this out! Feedback is always welcome.
